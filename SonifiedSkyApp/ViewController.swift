@@ -33,17 +33,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
         
-        let wait:SCNAction = SCNAction.wait(duration: 5)
-        let runAfter:SCNAction = SCNAction.run { _ in
-            
-            self.addstars()
-        }
-        
-        let seq:SCNAction = SCNAction.sequence( [wait, runAfter ] )
-        sceneView.scene.rootNode.runAction(seq)
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
-        self.sceneView.addGestureRecognizer(tapGestureRecognizer)
+       
         
       
         
@@ -295,85 +285,72 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let Dec = declination[i]
             positions.append(starCoordinates(RA: RA, Dec: Dec, latitude: latitude,LMST: LMST))
         }
-        let dt: Double = 1.0
-        let timer = Timer.scheduledTimer(withTimeInterval: dt, repeats: true) {timer in
-            LMST += 1.0/3600.0
+        let dt: Double = 60.0
+        let timer = Timer.scheduledTimer(withTimeInterval: dt, repeats: true) { [self]timer in
+            LMST += dt/3600.0
             for i in 0...right_ascension.count-1 {
                 let RA = right_ascension[i]
                 let Dec = declination[i]
                 positions[i] = starCoordinates(RA: RA, Dec: Dec, latitude: latitude, LMST: LMST)
                 print(positions[0])
-                print(SCNNode().self)
-            }
+                
+                
+                
+               
+            
+            // Star nodes
+            let starNode = self.sceneView.scene.rootNode.childNode(withName: "stars", recursively: false)
+            starNode?.position = SCNVector3()
+            
+            self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+            
+                if ( node.name == "star1"){
+                    print(star1)
+                    star1 = SCNNode()
+                    star1.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star1, options: nil))
+                    
+                 
+                    
+                } else if ( node.name == "star2"){
+                    print(star2)
+                    star2 = SCNNode()
+                    star2.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star2, options: nil))
+                   
+                    
+                } else if ( node.name == "star3"){
+                    print(star3)
+                    star3 = SCNNode()
+                    star3.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star3, options: nil))
+                  
+                
+                } else if ( node.name == "star4"){
+                    print(star4)
+                    star4 = SCNNode()
+                    star4.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star4, options: nil))
+                  
+                
+                } else if ( node.name == "star5"){
+                    print(star5)
+                    star5 = SCNNode()
+                    star5.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star5, options: nil))
+                   
+                    
+                } else if ( node.name == "star6"){
+                    print(star6)
+                    star6 = SCNNode()
+                    star6.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star6, options: nil))
+                 
+                    
+                }
+             }
+          }
         }
 
        
     }
     
-    @objc func handleTap(sender: UITapGestureRecognizer) {
-        
-       // guard let sceneView = sender.view as? ARSCNView else {return}
-        
-        let touchLocation = sender.location(in: sceneView)
-       
-        
-        
-        
-        
-    }
+   
     
-    func addstars() {
-        let starNode = self.sceneView.scene.rootNode.childNode(withName: "stars", recursively: false)
-        starNode?.position = SCNVector3(x: 0, y: -10, z: -20)
-        
-        self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
-        
-            if ( node.name == "star1"){
-                print()
-                star1 = node
-                star1.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star1, options: nil))
-                star1.physicsBody?.isAffectedByGravity = false
-                star1.physicsBody?.restitution = 1
-             
-                
-            } else if ( node.name == "star2"){
-                print(copy(), "Magnitudes from 2-2.99")
-                star2 = node
-                star2.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star2, options: nil))
-                star2.physicsBody?.isAffectedByGravity = false
-                star2.physicsBody?.restitution = 1
-                
-            } else if ( node.name == "star3"){
-                print(copy(), "Magnitudes from 3-3.99")
-                star3 = node
-                star3.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star3, options: nil))
-                star3.physicsBody?.isAffectedByGravity = false
-                star3.physicsBody?.restitution = 1
-            
-            } else if ( node.name == "star4"){
-                print(copy(), "Magnitudes from 4-4.99")
-                star4 = node
-                star4.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star4, options: nil))
-                star4.physicsBody?.isAffectedByGravity = false
-                star4.physicsBody?.restitution = 1
-            
-            } else if ( node.name == "star5"){
-                print(copy(), "Magnitudes from 5-5.99")
-                star5 = node
-                star5.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star5, options: nil))
-                star5.physicsBody?.isAffectedByGravity = false
-                star5.physicsBody?.restitution = 1
-                
-            } else if ( node.name == "star6"){
-                print(copy(), "Magnitudes from 6-6.5")
-                star6 = node
-                star6.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star6, options: nil))
-                star6.physicsBody?.isAffectedByGravity = false
-                star6.physicsBody?.restitution = 1
-                
-            }
-         }
-    }
         
         
     
@@ -384,7 +361,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-        self.sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showPhysicsShapes]
         
 
         // Run the view's session

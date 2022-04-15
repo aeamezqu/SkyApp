@@ -28,7 +28,6 @@
 		21205EC727F7423400E3C933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21205ED327F7921200E3C933 /* stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stars.swift; sourceTree = "<group>"; };
 		21205ED727FB747400E3C933 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
-		21C5BF4627FE23AA0069C4FD /* starplay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = starplay.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		21C5BF4727FE24D50069C4FD /* stardata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stardata.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +78,6 @@
 				21205ED727FB747400E3C933 /* Planet.swift */,
 				21C5BF4727FE24D50069C4FD /* stardata.csv */,
 				21205ED327F7921200E3C933 /* stars.swift */,
-				21C5BF4627FE23AA0069C4FD /* starplay.playground */,
 			);
 			path = Data;
 			sourceTree = "<group>";
