@@ -15,6 +15,7 @@
 		21205EC827F7423400E3C933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21205EC627F7423400E3C933 /* LaunchScreen.storyboard */; };
 		21205ED427F7921200E3C933 /* stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21205ED327F7921200E3C933 /* stars.swift */; };
 		21205ED827FB747400E3C933 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21205ED727FB747400E3C933 /* Planet.swift */; };
+		2187124C280A0E360035D16B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2187124B280A0E360035D16B /* Experience.rcproject */; };
 		21C5BF4827FE24D50069C4FD /* stardata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 21C5BF4727FE24D50069C4FD /* stardata.csv */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		21205EC727F7423400E3C933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21205ED327F7921200E3C933 /* stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stars.swift; sourceTree = "<group>"; };
 		21205ED727FB747400E3C933 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		2187124B280A0E360035D16B /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		2187124D280A12380035D16B /* SkyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkyApp.entitlements; sourceTree = "<group>"; };
 		21C5BF4727FE24D50069C4FD /* stardata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stardata.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +48,7 @@
 		21205EAF27F7423200E3C933 = {
 			isa = PBXGroup;
 			children = (
+				2187124D280A12380035D16B /* SkyApp.entitlements */,
 				21205ED227F791F800E3C933 /* Data */,
 				21205EBA27F7423200E3C933 /* SonifiedSkyApp */,
 				21205EB927F7423200E3C933 /* Products */,
@@ -78,6 +82,7 @@
 				21205ED727FB747400E3C933 /* Planet.swift */,
 				21C5BF4727FE24D50069C4FD /* stardata.csv */,
 				21205ED327F7921200E3C933 /* stars.swift */,
+				2187124B280A0E360035D16B /* Experience.rcproject */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21205EC027F7423200E3C933 /* ViewController.swift in Sources */,
+				2187124C280A0E360035D16B /* Experience.rcproject in Sources */,
 				21205EBC27F7423200E3C933 /* AppDelegate.swift in Sources */,
 				21205ED427F7921200E3C933 /* stars.swift in Sources */,
 				21205ED827FB747400E3C933 /* Planet.swift in Sources */,
@@ -303,9 +309,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96NPNR384Q;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -333,9 +340,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkyApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96NPNR384Q;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

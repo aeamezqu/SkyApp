@@ -9,8 +9,19 @@ import UIKit
 import SceneKit
 import ARKit
 import RealityKit
+import CoreMotion
+import IntentsUI
+import CoreLocation
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, INUIAddVoiceShortcutButtonDelegate {
+    func present(_ addVoiceShortcutViewController: INUIAddVoiceShortcutViewController, for addVoiceShortcutButton: INUIAddVoiceShortcutButton) {
+        
+    }
+    
+    func present(_ editVoiceShortcutViewController: INUIEditVoiceShortcutViewController, for addVoiceShortcutButton: INUIAddVoiceShortcutButton) {
+        
+    }
+    
 
     @IBOutlet var sceneView: ARSCNView!
     
@@ -20,9 +31,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var star4 = SCNNode()
     var star5 = SCNNode()
     var star6 = SCNNode()
+    let motionManager = CMMotionManager ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         // Set the view's delegate
         sceneView.delegate = self
@@ -35,7 +49,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
        
         
-      
+      // Adding Siri
+        
+        
+        motionManager.startAccelerometerUpdates()
+               
+           
+               motionManager.startGyroUpdates()
+               motionManager.startMagnetometerUpdates()
+               motionManager.startDeviceMotionUpdates()
         
         
         
@@ -46,6 +68,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the scene to the view
         sceneView.scene = scene
+        
+        
+        
+        
         
         // applying textures to nodes (planets)
         func applyTextures(to scene: SCNScene?) {
@@ -65,6 +91,31 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node?.geometry?.firstMaterial?.diffuse.contents = texture
           }
         }
+        
+        
+        // Siri func
+        func addSiriButton(to view: UIView) {
+                if #available(iOS 12.0, *) {
+                    let button = INUIAddVoiceShortcutButton(style: .whiteOutline)
+                    button.delegate = self
+                    button.translatesAutoresizingMaskIntoConstraints = false
+                    view.addSubview(button)
+                    view.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
+                    view.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
+                    
+
+                }
+        }
+        
+        
+        //struct ContentView : View {
+           // var body: some View {
+            //    return ARViewContainer().edgesIgnoringSafeArea(.all)
+           // }
+       // }
+        
+        
+     
         
         let starData = loadCSV(from: "stardata")
         var names: [String] = []
@@ -407,6 +458,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+
+
+    
     
 
 
