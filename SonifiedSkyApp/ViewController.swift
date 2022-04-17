@@ -356,9 +356,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, INUIAddVoiceShortcutB
             self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
             
                 if ( node.name == "star1"){
-                    print(star1)
+                    copy(50)
                     star1 = SCNNode()
                     star1.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star1, options: nil))
+                    return scene.rootNode.addChildNode(star1)
                     
                  
                     

@@ -16,6 +16,12 @@
 		21205ED427F7921200E3C933 /* stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21205ED327F7921200E3C933 /* stars.swift */; };
 		21205ED827FB747400E3C933 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21205ED727FB747400E3C933 /* Planet.swift */; };
 		2187124C280A0E360035D16B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2187124B280A0E360035D16B /* Experience.rcproject */; };
+		2187124F280CC87D0035D16B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187124E280CC87C0035D16B /* MainViewController.swift */; };
+		21871251280CC9580035D16B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871250280CC9580035D16B /* SceneDelegate.swift */; };
+		21871253280CC9BF0035D16B /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871252280CC9BF0035D16B /* SideMenuCell.swift */; };
+		21871255280CCA620035D16B /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871254280CCA620035D16B /* SideMenuModel.swift */; };
+		21871257280CCAA60035D16B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871256280CCAA60035D16B /* SideMenuViewController.swift */; };
+		21871259280CCB570035D16B /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871258280CCB570035D16B /* AppDelegate2.swift */; };
 		21C5BF4827FE24D50069C4FD /* stardata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 21C5BF4727FE24D50069C4FD /* stardata.csv */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +37,12 @@
 		21205ED727FB747400E3C933 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		2187124B280A0E360035D16B /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		2187124D280A12380035D16B /* SkyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkyApp.entitlements; sourceTree = "<group>"; };
+		2187124E280CC87C0035D16B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		21871250280CC9580035D16B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		21871252280CC9BF0035D16B /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		21871254280CCA620035D16B /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
+		21871256280CCAA60035D16B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		21871258280CCB570035D16B /* AppDelegate2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate2.swift; sourceTree = "<group>"; };
 		21C5BF4727FE24D50069C4FD /* stardata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stardata.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +79,12 @@
 			isa = PBXGroup;
 			children = (
 				21205EBB27F7423200E3C933 /* AppDelegate.swift */,
+				21871252280CC9BF0035D16B /* SideMenuCell.swift */,
+				21871256280CCAA60035D16B /* SideMenuViewController.swift */,
+				21871258280CCB570035D16B /* AppDelegate2.swift */,
+				21871254280CCA620035D16B /* SideMenuModel.swift */,
+				21871250280CC9580035D16B /* SceneDelegate.swift */,
+				2187124E280CC87C0035D16B /* MainViewController.swift */,
 				21205EBD27F7423200E3C933 /* art.scnassets */,
 				21205EBF27F7423200E3C933 /* ViewController.swift */,
 				21205EC127F7423200E3C933 /* Main.storyboard */,
@@ -160,11 +178,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21871259280CCB570035D16B /* AppDelegate2.swift in Sources */,
 				21205EC027F7423200E3C933 /* ViewController.swift in Sources */,
+				21871251280CC9580035D16B /* SceneDelegate.swift in Sources */,
 				2187124C280A0E360035D16B /* Experience.rcproject in Sources */,
 				21205EBC27F7423200E3C933 /* AppDelegate.swift in Sources */,
+				21871255280CCA620035D16B /* SideMenuModel.swift in Sources */,
+				2187124F280CC87D0035D16B /* MainViewController.swift in Sources */,
 				21205ED427F7921200E3C933 /* stars.swift in Sources */,
 				21205ED827FB747400E3C933 /* Planet.swift in Sources */,
+				21871257280CCAA60035D16B /* SideMenuViewController.swift in Sources */,
+				21871253280CC9BF0035D16B /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,9 +334,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SkyApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 96NPNR384Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -327,8 +352,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SonifiedSkyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SkyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,9 +367,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SkyApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 96NPNR384Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -358,8 +385,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SonifiedSkyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SkyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
