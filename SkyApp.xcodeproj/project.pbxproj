@@ -16,12 +16,6 @@
 		21205ED427F7921200E3C933 /* stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21205ED327F7921200E3C933 /* stars.swift */; };
 		21205ED827FB747400E3C933 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21205ED727FB747400E3C933 /* Planet.swift */; };
 		2187124C280A0E360035D16B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2187124B280A0E360035D16B /* Experience.rcproject */; };
-		2187124F280CC87D0035D16B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2187124E280CC87C0035D16B /* MainViewController.swift */; };
-		21871251280CC9580035D16B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871250280CC9580035D16B /* SceneDelegate.swift */; };
-		21871253280CC9BF0035D16B /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871252280CC9BF0035D16B /* SideMenuCell.swift */; };
-		21871255280CCA620035D16B /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871254280CCA620035D16B /* SideMenuModel.swift */; };
-		21871257280CCAA60035D16B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871256280CCAA60035D16B /* SideMenuViewController.swift */; };
-		21871259280CCB570035D16B /* AppDelegate2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21871258280CCB570035D16B /* AppDelegate2.swift */; };
 		21C5BF4827FE24D50069C4FD /* stardata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 21C5BF4727FE24D50069C4FD /* stardata.csv */; };
 /* End PBXBuildFile section */
 
@@ -37,12 +31,6 @@
 		21205ED727FB747400E3C933 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		2187124B280A0E360035D16B /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		2187124D280A12380035D16B /* SkyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkyApp.entitlements; sourceTree = "<group>"; };
-		2187124E280CC87C0035D16B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		21871250280CC9580035D16B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		21871252280CC9BF0035D16B /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
-		21871254280CCA620035D16B /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
-		21871256280CCAA60035D16B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		21871258280CCB570035D16B /* AppDelegate2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate2.swift; sourceTree = "<group>"; };
 		21C5BF4727FE24D50069C4FD /* stardata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stardata.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,12 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				21205EBB27F7423200E3C933 /* AppDelegate.swift */,
-				21871252280CC9BF0035D16B /* SideMenuCell.swift */,
-				21871256280CCAA60035D16B /* SideMenuViewController.swift */,
-				21871258280CCB570035D16B /* AppDelegate2.swift */,
-				21871254280CCA620035D16B /* SideMenuModel.swift */,
-				21871250280CC9580035D16B /* SceneDelegate.swift */,
-				2187124E280CC87C0035D16B /* MainViewController.swift */,
 				21205EBD27F7423200E3C933 /* art.scnassets */,
 				21205EBF27F7423200E3C933 /* ViewController.swift */,
 				21205EC127F7423200E3C933 /* Main.storyboard */,
@@ -178,17 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21871259280CCB570035D16B /* AppDelegate2.swift in Sources */,
 				21205EC027F7423200E3C933 /* ViewController.swift in Sources */,
-				21871251280CC9580035D16B /* SceneDelegate.swift in Sources */,
 				2187124C280A0E360035D16B /* Experience.rcproject in Sources */,
 				21205EBC27F7423200E3C933 /* AppDelegate.swift in Sources */,
-				21871255280CCA620035D16B /* SideMenuModel.swift in Sources */,
-				2187124F280CC87D0035D16B /* MainViewController.swift in Sources */,
 				21205ED427F7921200E3C933 /* stars.swift in Sources */,
 				21205ED827FB747400E3C933 /* Planet.swift in Sources */,
-				21871257280CCAA60035D16B /* SideMenuViewController.swift in Sources */,
-				21871253280CC9BF0035D16B /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
