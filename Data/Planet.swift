@@ -18,6 +18,7 @@ enum Planet: String, CaseIterable {
   case uranus
   case neptune
   case sun
+  case moon
   
 
   var name: String {
