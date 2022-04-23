@@ -13,14 +13,8 @@ import CoreMotion
 import IntentsUI
 import CoreLocation
 
-class ViewController: UIViewController, ARSCNViewDelegate, INUIAddVoiceShortcutButtonDelegate {
-    func present(_ addVoiceShortcutViewController: INUIAddVoiceShortcutViewController, for addVoiceShortcutButton: INUIAddVoiceShortcutButton) {
-        
-    }
-    
-    func present(_ editVoiceShortcutViewController: INUIEditVoiceShortcutViewController, for addVoiceShortcutButton: INUIAddVoiceShortcutButton) {
-        
-    }
+class ViewController: UIViewController, ARSCNViewDelegate {
+  
     
 
     @IBOutlet var sceneView: ARSCNView!
@@ -93,19 +87,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, INUIAddVoiceShortcutB
         }
         
         
-        // Siri func
-        func addSiriButton(to view: UIView) {
-                if #available(iOS 12.0, *) {
-                    let button = INUIAddVoiceShortcutButton(style: .whiteOutline)
-                    button.delegate = self
-                    button.translatesAutoresizingMaskIntoConstraints = false
-                    view.addSubview(button)
-                    view.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
-                    view.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
-                    
-
-                }
-        }
         
         
         //struct ContentView : View {
@@ -117,7 +98,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, INUIAddVoiceShortcutB
         
      
         
-        let starData = loadCSV(from: "stardata")
+        let starData = loadCSV(from: "stardata2")
         var names: [String] = []
         var right_ascension: [Double] = []
         var declination: [Double] = []
@@ -356,7 +337,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, INUIAddVoiceShortcutB
             self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
             
                 if ( node.name == "star1"){
-                    copy(50)
                     star1 = SCNNode()
                     star1.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star1, options: nil))
                     return scene.rootNode.addChildNode(star1)
