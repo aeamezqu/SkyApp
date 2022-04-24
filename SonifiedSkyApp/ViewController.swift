@@ -19,12 +19,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
-    var star1 = SCNNode()
-    var star2 = SCNNode()
-    var star3 = SCNNode()
-    var star4 = SCNNode()
-    var star5 = SCNNode()
-    var star6 = SCNNode()
+    var stars = SCNNode()
+    var simdPosition = SCNNode()
+    var newNode = SCNNode()
+    var node = SCNNode()
+  
+   
     let motionManager = CMMotionManager ()
     
     override func viewDidLoad() {
@@ -317,7 +317,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let Dec = declination[i]
             positions.append(starCoordinates(RA: RA, Dec: Dec, latitude: latitude,LMST: LMST))
         }
-        let dt: Double = 60.0
+        let dt: Double = 120.0
         let timer = Timer.scheduledTimer(withTimeInterval: dt, repeats: true) { [self]timer in
             LMST += dt/3600.0
             for i in 0...right_ascension.count-1 {
@@ -326,60 +326,65 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 positions[i] = starCoordinates(RA: RA, Dec: Dec, latitude: latitude, LMST: LMST)
                 print(positions[0])
                 
+                stars.worldPosition = SCNVector3(x: Float(positions[0][0]!), y: Float(positions[0][1]!), z: Float(positions[0][2]!))
+                
+                let wait:SCNAction = SCNAction.wait(duration: 3)
+                let runAfterWaiting:SCNAction = SCNAction.run { _ in
+                           
+                            //do whatever you want here.... if you call a function, write self in front
+                           
+                }
+                let seq:SCNAction = SCNAction.sequence( [wait, runAfterWaiting ] )
+                sceneView.scene.rootNode.runAction(seq)
+                
+                
+                
+             //   self.sceneView.scene.rootNode.runAction() { (node, _) in
+                    
+                
+                        if node.name == "stars" {
+                            stars = node
+                            stars.position = node.position
+                            print(stars.worldPosition)
+                            print(stars.actionKeys)
+                        }
+                 //   }
                 
                 
                
             
             // Star nodes
-            let starNode = self.sceneView.scene.rootNode.childNode(withName: "stars", recursively: false)
-            starNode?.position = SCNVector3()
-            
-            self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
-            
-                if ( node.name == "star1"){
-                    star1 = SCNNode()
-                    star1.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star1, options: nil))
-                    return scene.rootNode.addChildNode(star1)
-                    
-                 
-                    
-                } else if ( node.name == "star2"){
-                    print(star2)
-                    star2 = SCNNode()
-                    star2.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star2, options: nil))
-                   
-                    
-                } else if ( node.name == "star3"){
-                    print(star3)
-                    star3 = SCNNode()
-                    star3.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star3, options: nil))
-                  
+           // let starNode = self.sceneView.scene.rootNode.childNode(withName: "stars", recursively: false)
                 
-                } else if ( node.name == "star4"){
-                    print(star4)
-                    star4 = SCNNode()
-                    star4.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star4, options: nil))
-                  
                 
-                } else if ( node.name == "star5"){
-                    print(star5)
-                    star5 = SCNNode()
-                    star5.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star5, options: nil))
-                   
-                    
-                } else if ( node.name == "star6"){
-                    print(star6)
-                    star6 = SCNNode()
-                    star6.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: star6, options: nil))
+               // print(stars.worldPosition)
+                
+                // Create a copy of the model set its position/rotation
                  
-                    
-                }
+           // self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+                
+                
+               
+                
+                
+            
+              //  if ( node.name == "stars"){
+                    //stars = SCNNode()
+                   
+                   // stars.physicsBody = SCNPhysicsBody(type: .dynamic, shape: //SCNPhysicsShape(node: stars, options: nil))
+                  //  return
+
+                //}
+                
+                //sceneView.scene.rootNode.addChildNode(node)
              }
+                
+                
           }
         }
 
        
-    }
+    
     
    
     
