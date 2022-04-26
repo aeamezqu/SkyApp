@@ -12,22 +12,56 @@ import RealityKit
 import CoreMotion
 import IntentsUI
 import CoreLocation
+import AVFoundation
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate {
   
     
 
     @IBOutlet var sceneView: ARSCNView!
+    
     
     var stars = SCNNode()
     var simdPosition = SCNNode()
     var newNode = SCNNode()
     var node = SCNNode()
     var starMovement = SCNAction()
+    var player: AVAudioPlayer = AVAudioPlayer()
+    
+    @IBAction func Sonify(_sender: Any){
+        
+        player.play()
+        
+        
+    }
+    
+    
+    
+    @IBAction func Stop(_sender: Any){
+        
+        
+        player.stop()
+        
+    }
    
     let motionManager = CMMotionManager ()
     
     override func viewDidLoad() {
+        
+        do {
+            let audioPlayer = Bundle.main.path(forResource: "SonifiedStars", ofType: "mp3")
+            
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer!) as URL)
+            
+        }
+        
+        catch {
+             
+            //ERROR
+            
+        }
+        
+        
         super.viewDidLoad()
         
         
@@ -95,26 +129,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
           }
         }
         
-        func addActions(to scene: SCNScene?) -> SCNAction {
+       // func addActions(to scene: SCNScene?) -> SCNAction {
             
-            self.stars.worldPosition = SCNVector3()
-            stars = node
-            _ = (x: Float(positions[0][0]!), y: Float(positions[0][1]!), z: Float(positions[0][2]!))
-            let starMovement = SCNAction.move(to: stars.worldPosition, duration: 10)
-            stars.position = node.position
+          //  self.stars.worldPosition = SCNVector3()
+          //  stars = node
+          //  _ = (x: Float(positions[0][0]!), y: Float(positions[0][1]!), z: Float(positions[0][2]!))
+          //  let starMovement = SCNAction.move(to: stars.worldPosition, duration: 10)
+            //stars.position = node.position
             
             
-             if node.name == "stars" {
-                 return SCNAction()
+           //  if node.name == "stars" {
+              //   return SCNAction()
                  
 
-                 return starMovement
+               //  return starMovement
                  //print(stars.worldPosition)
                  //print(starMovement)
-             }
+            // }
             
-            return starMovement
-        }
+            //return starMovement
+        //}
         
         
         
@@ -347,7 +381,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let Dec = declination[i]
             positions.append(starCoordinates(RA: RA, Dec: Dec, latitude: latitude,LMST: LMST))
         }
-        let dt: Double = 10.0
+        let dt: Double = 60.0
         let timer = Timer.scheduledTimer(withTimeInterval: dt, repeats: true) { [self]timer in
             LMST += dt/3600.0
             for i in 0...right_ascension.count-1 {
@@ -367,26 +401,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                        let cameraNode = SCNNode()
                        cameraNode.camera = camera
                        let geometry = SCNSphere(radius: 1)
-                       var node = SCNNode(geometry: geometry)
+                       let node = SCNNode(geometry: geometry)
                        node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
                        node.position = SCNVector3(0,0,10)
                        node.physicsBody = SCNPhysicsBody(type:.dynamic, shape: SCNPhysicsShape(node:node, options: nil))
                        node.physicsBody?.isAffectedByGravity = false
                        node.physicsBody?.resetTransform()
                        scene.rootNode.addChildNode(node)
-                       let stars = scene.rootNode.childNode(withName: "stars", recursively: false)
-                       let action = SCNAction.move(to: SCNVector3(0,0,-40), duration: 1)
+                      
+                let action = SCNAction.move(to: SCNVector3(-7.652,9.078,6.373), duration: 10)
                        node.runAction(action)
                        sceneView.allowsCameraControl = true
+                print(stars.worldPosition)
                
                 
-               
+            
                 
-                
-             //   self.sceneView.scene.rootNode.runAction() { (node, _) in
-                    
-                
-                       
                 
                 
                  //   }
@@ -455,6 +485,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         
     }
+    
+    
 
     // MARK: - ARSCNViewDelegate
     
