@@ -381,7 +381,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate
             let Dec = declination[i]
             positions.append(starCoordinates(RA: RA, Dec: Dec, latitude: latitude,LMST: LMST))
         }
-        let dt: Double = 60.0
+        let dt: Double = 120.0
         let timer = Timer.scheduledTimer(withTimeInterval: dt, repeats: true) { [self]timer in
             LMST += dt/3600.0
             for i in 0...right_ascension.count-1 {
@@ -397,22 +397,22 @@ class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate
                 //Making a node (star)
                 
                
-                       let camera = SCNCamera()
-                       let cameraNode = SCNNode()
-                       cameraNode.camera = camera
-                       let geometry = SCNSphere(radius: 1)
-                       let node = SCNNode(geometry: geometry)
-                       node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
-                       node.position = SCNVector3(0,0,10)
-                       node.physicsBody = SCNPhysicsBody(type:.dynamic, shape: SCNPhysicsShape(node:node, options: nil))
-                       node.physicsBody?.isAffectedByGravity = false
-                       node.physicsBody?.resetTransform()
-                       scene.rootNode.addChildNode(node)
+                     //  let camera = SCNCamera()
+                     //  let cameraNode = SCNNode()
+                    //   cameraNode.camera = camera
+                     //  let geometry = SCNSphere(radius: 1)
+                       //let node = SCNNode(geometry: geometry)
+                       //node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+                      // node.position = SCNVector3(0,0,10)
+                     //  node.physicsBody = SCNPhysicsBody(type:.dynamic, shape: SCNPhysicsShape(node:node, options: nil))
+                     //  node.physicsBody?.isAffectedByGravity = false
+                     //  node.physicsBody?.resetTransform()
+                     //  scene.rootNode.addChildNode(node)
                       
-                let action = SCNAction.move(to: SCNVector3(-7.652,9.078,6.373), duration: 10)
-                       node.runAction(action)
-                       sceneView.allowsCameraControl = true
-                print(stars.worldPosition)
+               // let action = SCNAction.move(to: SCNVector3(-7.652,9.078,6.373), duration: 10)
+                     //  node.runAction(action)
+                     //  sceneView.allowsCameraControl = true
+              //  print(stars.worldPosition)
                
                 
             
