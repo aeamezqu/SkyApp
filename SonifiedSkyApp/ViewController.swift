@@ -27,10 +27,20 @@ class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate
     var node = SCNNode()
     var starMovement = SCNAction()
     var player: AVAudioPlayer = AVAudioPlayer()
+    var player2: AVAudioPlayer = AVAudioPlayer()
+    var player3: AVAudioPlayer = AVAudioPlayer()
     
-    @IBAction func Sonify(_sender: Any){
+    @IBAction func Stars(_sender: Any){
         
         player.play()
+        
+        
+    }
+    
+    
+    @IBAction func Planets(_sender: Any){
+        
+        player2.play()
         
         
     }
@@ -41,6 +51,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate
         
         
         player.stop()
+        player2.stop()
+        player3.stop()
+        
+    }
+    
+    @IBAction func Sun(_sender: Any){
+       
+        player3.play()
+        
         
     }
    
@@ -51,9 +70,18 @@ class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate
         do {
             let audioPlayer = Bundle.main.path(forResource: "SonifiedStars", ofType: "mp3")
             
+            let audioPlayer2 = Bundle.main.path(forResource: "planetmags", ofType: "mp3")
+            
+            let audioPlayer3 = Bundle.main.path(forResource: "SunSonified", ofType: "mp3")
+            
             try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer!) as URL)
             
+            try player2 = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer2!) as URL)
+            
+            try player3 = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer3!) as URL)
+            
         }
+        
         
         catch {
              
@@ -77,13 +105,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate
         
        
         
-        
-        
-        
-        
-       
-        
-        
+        // Sonifying Planets
         
         
       // Adding Siri

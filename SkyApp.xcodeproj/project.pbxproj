@@ -15,7 +15,16 @@
 		21205EC827F7423400E3C933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21205EC627F7423400E3C933 /* LaunchScreen.storyboard */; };
 		21205ED427F7921200E3C933 /* stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21205ED327F7921200E3C933 /* stars.swift */; };
 		21205ED827FB747400E3C933 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21205ED727FB747400E3C933 /* Planet.swift */; };
-		21587F78281895D5009923B0 /* SonifiedStars.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F77281895D5009923B0 /* SonifiedStars.mp3 */; };
+		21587F7A281905B3009923B0 /* planetmags.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F79281905B3009923B0 /* planetmags.mp3 */; };
+		21587F8C2819C101009923B0 /* marssonified.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F852819C100009923B0 /* marssonified.mp3 */; };
+		21587F8D2819C101009923B0 /* venussonified.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F862819C100009923B0 /* venussonified.mp3 */; };
+		21587F8E2819C101009923B0 /* jupitersonified.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F872819C101009923B0 /* jupitersonified.mp3 */; };
+		21587F8F2819C101009923B0 /* neptunesonified.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F882819C101009923B0 /* neptunesonified.mp3 */; };
+		21587F902819C101009923B0 /* uranussonified.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F892819C101009923B0 /* uranussonified.mp3 */; };
+		21587F912819C101009923B0 /* mercurysonified.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F8A2819C101009923B0 /* mercurysonified.mp3 */; };
+		21587F922819C101009923B0 /* saturnsonified.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F8B2819C101009923B0 /* saturnsonified.mp3 */; };
+		21587F9D2819C832009923B0 /* SonifiedStars.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F9C2819C832009923B0 /* SonifiedStars.mp3 */; };
+		21587F9F2819C83C009923B0 /* SunSonified.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 21587F9E2819C83C009923B0 /* SunSonified.mp3 */; };
 		2166562728145B6A004D9570 /* stardata2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2166562628145B6A004D9570 /* stardata2.csv */; };
 		2187124C280A0E360035D16B /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2187124B280A0E360035D16B /* Experience.rcproject */; };
 		21C5BF4827FE24D50069C4FD /* stardata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 21C5BF4727FE24D50069C4FD /* stardata.csv */; };
@@ -31,7 +40,16 @@
 		21205EC727F7423400E3C933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21205ED327F7921200E3C933 /* stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stars.swift; sourceTree = "<group>"; };
 		21205ED727FB747400E3C933 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
-		21587F77281895D5009923B0 /* SonifiedStars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SonifiedStars.mp3; sourceTree = "<group>"; };
+		21587F79281905B3009923B0 /* planetmags.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = planetmags.mp3; sourceTree = "<group>"; };
+		21587F852819C100009923B0 /* marssonified.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marssonified.mp3; sourceTree = "<group>"; };
+		21587F862819C100009923B0 /* venussonified.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = venussonified.mp3; sourceTree = "<group>"; };
+		21587F872819C101009923B0 /* jupitersonified.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jupitersonified.mp3; sourceTree = "<group>"; };
+		21587F882819C101009923B0 /* neptunesonified.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = neptunesonified.mp3; sourceTree = "<group>"; };
+		21587F892819C101009923B0 /* uranussonified.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = uranussonified.mp3; sourceTree = "<group>"; };
+		21587F8A2819C101009923B0 /* mercurysonified.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mercurysonified.mp3; sourceTree = "<group>"; };
+		21587F8B2819C101009923B0 /* saturnsonified.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = saturnsonified.mp3; sourceTree = "<group>"; };
+		21587F9C2819C832009923B0 /* SonifiedStars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SonifiedStars.mp3; sourceTree = "<group>"; };
+		21587F9E2819C83C009923B0 /* SunSonified.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SunSonified.mp3; sourceTree = "<group>"; };
 		2166562628145B6A004D9570 /* stardata2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stardata2.csv; path = ../../../Downloads/stardata2.csv; sourceTree = "<group>"; };
 		2187124B280A0E360035D16B /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		2187124D280A12380035D16B /* SkyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkyApp.entitlements; sourceTree = "<group>"; };
@@ -72,7 +90,7 @@
 		21205EBA27F7423200E3C933 /* SonifiedSkyApp */ = {
 			isa = PBXGroup;
 			children = (
-				21587F77281895D5009923B0 /* SonifiedStars.mp3 */,
+				21587F952819C267009923B0 /* SonificationSounds */,
 				21205EBB27F7423200E3C933 /* AppDelegate.swift */,
 				21205EBD27F7423200E3C933 /* art.scnassets */,
 				21205EBF27F7423200E3C933 /* ViewController.swift */,
@@ -93,6 +111,23 @@
 				2187124B280A0E360035D16B /* Experience.rcproject */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		21587F952819C267009923B0 /* SonificationSounds */ = {
+			isa = PBXGroup;
+			children = (
+				21587F9E2819C83C009923B0 /* SunSonified.mp3 */,
+				21587F9C2819C832009923B0 /* SonifiedStars.mp3 */,
+				21587F79281905B3009923B0 /* planetmags.mp3 */,
+				21587F872819C101009923B0 /* jupitersonified.mp3 */,
+				21587F852819C100009923B0 /* marssonified.mp3 */,
+				21587F8A2819C101009923B0 /* mercurysonified.mp3 */,
+				21587F882819C101009923B0 /* neptunesonified.mp3 */,
+				21587F8B2819C101009923B0 /* saturnsonified.mp3 */,
+				21587F892819C101009923B0 /* uranussonified.mp3 */,
+				21587F862819C100009923B0 /* venussonified.mp3 */,
+			);
+			path = SonificationSounds;
 			sourceTree = "<group>";
 		};
 		218EFB362817559D00C0037A /* Frameworks */ = {
@@ -161,13 +196,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21587F7A281905B3009923B0 /* planetmags.mp3 in Resources */,
+				21587F8D2819C101009923B0 /* venussonified.mp3 in Resources */,
 				21205EBE27F7423200E3C933 /* art.scnassets in Resources */,
 				21205EC827F7423400E3C933 /* LaunchScreen.storyboard in Resources */,
+				21587F9F2819C83C009923B0 /* SunSonified.mp3 in Resources */,
 				21205EC527F7423400E3C933 /* Assets.xcassets in Resources */,
+				21587F8F2819C101009923B0 /* neptunesonified.mp3 in Resources */,
+				21587F8C2819C101009923B0 /* marssonified.mp3 in Resources */,
 				2166562728145B6A004D9570 /* stardata2.csv in Resources */,
+				21587F902819C101009923B0 /* uranussonified.mp3 in Resources */,
+				21587F912819C101009923B0 /* mercurysonified.mp3 in Resources */,
 				21C5BF4827FE24D50069C4FD /* stardata.csv in Resources */,
+				21587F922819C101009923B0 /* saturnsonified.mp3 in Resources */,
 				21205EC327F7423200E3C933 /* Main.storyboard in Resources */,
-				21587F78281895D5009923B0 /* SonifiedStars.mp3 in Resources */,
+				21587F9D2819C832009923B0 /* SonifiedStars.mp3 in Resources */,
+				21587F8E2819C101009923B0 /* jupitersonified.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
