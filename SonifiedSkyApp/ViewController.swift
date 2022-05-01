@@ -15,8 +15,8 @@ import CoreLocation
 import AVFoundation
 
 class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate {
-  
     
+  
 
     @IBOutlet var sceneView: ARSCNView!
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate
     var player2: AVAudioPlayer = AVAudioPlayer()
     var player3: AVAudioPlayer = AVAudioPlayer()
     
-    @IBAction func Stars(_sender: Any){
+    @IBAction func Sonify(_sender: Any){
         
         player.play()
         
@@ -70,7 +70,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate
         do {
             let audioPlayer = Bundle.main.path(forResource: "SonifiedStars", ofType: "mp3")
             
-            let audioPlayer2 = Bundle.main.path(forResource: "planetmags", ofType: "mp3")
+            let audioPlayer2 = Bundle.main.path(forResource: "newplanetmags", ofType: "mp3")
             
             let audioPlayer3 = Bundle.main.path(forResource: "SunSonified", ofType: "mp3")
             
@@ -88,6 +88,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, AVAudioPlayerDelegate
             //ERROR
             
         }
+        
+        
+      
         
         
         super.viewDidLoad()
